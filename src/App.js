@@ -1,5 +1,4 @@
 import React, { useRef, useState, useEffect } from 'react';
-import { ArrowRight } from 'lucide-react';
 import { createPortal } from 'react-dom';
 import { 
     UploadCloud, FileText, ListCollapse, Folder, Clock, Settings, CheckCircle, XCircle, 

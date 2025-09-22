@@ -20,8 +20,8 @@ import SmartSuggestions from './components/SmartSuggestions';
 import RealTimeComments from './components/RealTimeComments';
 import MultiLanguageSupport from './components/MultiLanguageSupport';
 
-// API base URL - use environment variable or fallback to localhost
-const API_BASE_URL = process.env.REACT_APP_API_URL || 'http://127.0.0.1:5000';
+// API base URL - hardcoded for Azure backend
+const API_BASE_URL = 'https://ba-agent-backend-ftgndqeyatg9hvhd.centralus-01.azurewebsites.net';
 
 // React Error Boundary to catch DOM manipulation errors
 class ErrorBoundary extends React.Component {
@@ -68,7 +68,7 @@ function OneDriveStatusIndicator() {
 
   const checkStatus = async () => {
     try {
-      const response = await fetch('/api/integrations/onedrive/status');
+      const response = await fetch(`${API_BASE_URL}/api/integrations/onedrive/status`);
       if (response.status === 401) {
         setStatus('not_authenticated');
         setMessage('Please log in to check OneDrive status');

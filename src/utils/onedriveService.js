@@ -1,7 +1,7 @@
 // onedriveService.js
 // Frontend service for OneDrive integration
 
-const API_BASE_URL = process.env.REACT_APP_API_BASE_URL || 'http://localhost:5000';
+const API_BASE_URL = 'https://ba-agent-backend-ftgndqeyatg9hvhd.centralus-01.azurewebsites.net';
 
 class OneDriveService {
   constructor() {

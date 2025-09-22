@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { Lightbulb, CheckCircle, XCircle } from 'lucide-react';
 import { 
   Lightbulb, CheckCircle, XCircle, AlertTriangle, 
   FileText, Target, Users, Clock, TrendingUp,

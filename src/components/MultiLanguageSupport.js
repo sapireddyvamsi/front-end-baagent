@@ -1,5 +1,4 @@
 import React, { useState, useEffect } from 'react';
-import { AlertCircle } from 'lucide-react';
 import { 
   Globe, Languages, CheckCircle, AlertCircle, 
   Download, Upload, FileText, Settings, 

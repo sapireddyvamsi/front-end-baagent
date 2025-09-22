@@ -464,16 +464,13 @@ const EnhancedDocumentViewer = ({
             </div>
             <div className="flex items-center gap-2">
               <span className="text-sm text-gray-500">View:</span>
-              <button
-                onClick={() => setShowThumbnails(!showThumbnails)}
-                className={`px-3 py-1 rounded-md text-sm transition-colors ${
+              <div className={`px-3 py-1 rounded-md text-sm ${
                   showThumbnails 
                     ? 'bg-blue-100 text-blue-700' 
-                    : 'bg-gray-100 text-gray-600 hover:bg-gray-200'
-                }`}
-              >
+                    : 'bg-gray-100 text-gray-600'
+                }`}>
                 {showThumbnails ? 'Thumbnails' : 'List'}
-              </button>
+              </div>
             </div>
           </div>
 

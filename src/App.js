@@ -20,8 +20,8 @@ import SmartSuggestions from './components/SmartSuggestions';
 import RealTimeComments from './components/RealTimeComments';
 import MultiLanguageSupport from './components/MultiLanguageSupport';
 
-// API base URL - hardcoded for Azure backend
-const API_BASE_URL = 'https://ba-agent-backend-ftgndqeyatg9hvhd.centralus-01.azurewebsites.net';
+// API base URL - hardcoded for Vercel backend
+const API_BASE_URL = 'https://backend-new-bagaent1.vercel.app';
 
 // React Error Boundary to catch DOM manipulation errors
 class ErrorBoundary extends React.Component {

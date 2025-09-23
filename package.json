@@ -51,7 +51,7 @@
       "last 1 safari version"
     ]
   },
-  "proxy": "https://ba-agent-backend-ftgndqeyatg9hvhd.centralus-01.azurewebsites.net",
+  "proxy": "https://backend-new-bagaent1.vercel.app",
   "devDependencies": {
     "autoprefixer": "^10.4.21",
     "postcss": "^8.5.6",

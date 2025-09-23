@@ -1,7 +1,7 @@
 // onedriveService.js
 // Frontend service for OneDrive integration
 
-const API_BASE_URL = 'https://ba-agent-backend-ftgndqeyatg9hvhd.centralus-01.azurewebsites.net';
+const API_BASE_URL = 'https://backend-new-bagaent1.vercel.app';
 
 class OneDriveService {
   constructor() {

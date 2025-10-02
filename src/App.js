@@ -638,10 +638,8 @@ function MermaidDiagram({ code, id, showDownloadPng, showPngInline, title }) {
     if (nodes.length > 0) {
       // Create a simplified diagram with the extracted nodes
       let fallbackCode = 'graph TD\n';
-      nodes.forEach((node, index) => {
-        if (index > 0) {
-          fallbackCode += `${nodes[index - 1].id} --> ${node.id}\n`;
-        }
+      nodes.forEach(node => {
+        fallbackCode += `  ${node.id}[${node.label}]\n`;
       });
       return fallbackCode;
     }
@@ -1674,6 +1672,7 @@ const BreadcrumbNavigation = ({ activeSection, selectedLOB, projectTags, lobCate
         <ChevronRight className="w-4 h-4" />
         <span className="flex items-center gap-1">
           {getSectionIcon(activeSection)}
+
           <span className="font-medium">{getSectionName(activeSection)}</span>
         </span>
         
@@ -2313,7 +2312,7 @@ const PastAnalysesSection = ({ pastAnalyses, selectedAnalysis, setSelectedAnalys
                       // Here you could implement a function to load the full analysis results
                       console.log('Loading full analysis:', selectedAnalysis.id);
                     }}
-                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700"
+                    className="flex items-center gap-2 px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700"
                   >
                     <Eye className="w-4 h-4" />
                     View Full Analysis
@@ -2397,6 +2396,9 @@ function MainApp() {
   const [onedriveFiles, setOnedriveFiles] = useState([]);
   const [onedriveLoading, setOnedriveLoading] = useState(false);
   const [showUploadContainer, setShowUploadContainer] = useState(true);
+
+  // Full Analysis Modal State
+  const [fullAnalysisModal, setFullAnalysisModal] = useState({ open: false, data: null, loading: false, error: null });
 
   // LOB Categories for P&C Insurance
   const lobCategories = [
@@ -3071,8 +3073,6 @@ function MainApp() {
           <div className="flex items-center gap-3">
             <div className="relative">
               <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center animate-pulse">
-                <Activity className="w-4 h-4 text-white" />
-              </div>
               <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
             </div>
             <div>

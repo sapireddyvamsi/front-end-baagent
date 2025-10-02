@@ -3068,26 +3068,27 @@ function MainApp() {
     };
 
     return (
-      <div className="mb-8 bg-white rounded-xl shadow-lg p-6 border border-gray-200">
-        <div className="flex items-center justify-between mb-4">
-          <div className="flex items-center gap-3">
-            <div className="relative">
-              <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center animate-pulse">
-              <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
-            </div>
-            <div>
-              <h3 className="text-lg font-semibold text-gray-800">Analysis in Progress</h3>
-              <p className="text-sm text-gray-600">Step {currentStep} of {stepNames.length}</p>
-            </div>
+  <div className="mb-8 bg-white rounded-xl shadow-lg p-6 border border-gray-200">
+    <div className="flex items-center justify-between mb-4">
+      <div className="flex items-center gap-3">
+        <div className="relative">
+          <div className="w-8 h-8 bg-blue-600 rounded-full flex items-center justify-center animate-pulse">
+            <div className="absolute -top-1 -right-1 w-3 h-3 bg-green-500 rounded-full animate-ping"></div>
           </div>
-          <button
-            onClick={() => setShowDetails(!showDetails)}
-            className="flex items-center gap-2 px-3 py-1 text-sm text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
-          >
-            {showDetails ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
-            {showDetails ? 'Hide Details' : 'Show Details'}
-          </button>
         </div>
+        <div>
+          <h3 className="text-lg font-semibold text-gray-800">Analysis in Progress</h3>
+          <p className="text-sm text-gray-600">Step {currentStep} of {stepNames.length}</p>
+        </div>
+      </div>
+      <button
+        onClick={() => setShowDetails(!showDetails)}
+        className="flex items-center gap-2 px-3 py-1 text-sm text-blue-600 hover:bg-blue-50 rounded-lg transition-colors"
+      >
+        {showDetails ? <ChevronUp className="w-4 h-4" /> : <ChevronDown className="w-4 h-4" />}
+        {showDetails ? 'Hide Details' : 'Show Details'}
+      </button>
+    </div>
 
         {/* Progress Bar */}
         <div className="mb-4">
